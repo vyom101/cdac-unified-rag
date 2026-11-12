@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #ffffff; }
+body { width: 760px; font-family: "Segoe UI", Calibri, sans-serif; color: #1c2833; }
+.page { width: 760px; background: #f4f7fb; padding: 18px 18px 22px; }
+.banner { background: linear-gradient(120deg, #14324a 0%, #0e6b5c 100%); color: white;
+  border-radius: 18px; padding: 16px 18px 14px; }
+.kicker { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
+h1 { font-size: 26px; line-height: 1.15; margin: 4px 0 8px; }
+.lede { margin: 0; font-size: 16px; line-height: 1.35; color: #e8f4f1; }
+.phase { margin: 14px 0 6px; font-size: 13px; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: #0e6b5c; }
+.step { display: flex; gap: 10px; align-items: stretch; }
+.rail { width: 36px; display: flex; flex-direction: column; align-items: center; }
+.num { width: 32px; height: 32px; border-radius: 16px; background: #0e6b5c; color: white;
+  font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+.num.gold { background: #b7791f; }
+.num.navy { background: #1d4e89; }
+.num.red { background: #9b2c2c; }
+.stem { width: 3px; flex: 1; background: #c5d4e0; margin-top: 4px; }
+.card { flex: 1; background: white; border: 1px solid #d7e1ea; border-radius: 14px;
+  padding: 10px 12px 11px; box-shadow: 0 1px 0 rgba(20,50,74,.04); margin-bottom: 8px; }
+.card h2 { margin: 0 0 4px; font-size: 18px; color: #14324a; }
+.card p { margin: 0; font-size: 15px; line-height: 1.35; }
+.io { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chip { font-size: 13px; font-weight: 700; border-radius: 999px; padding: 3px 8px; }
+.in { background: #e7eef6; color: #1d4e89; }
+.out { background: #e5f6f1; color: #0e6b5c; }
+.mod { margin-top: 6px; font-family: Consolas, monospace; font-size: 13px; color: #5c6b7a; }
+.decision { background: #fff8ec; border-color: #f0d7a6; }
+.fail { background: #fff5f5; border-color: #f0c2c2; }
+.note { background: #f7f1e4; border-color: #ead9b0; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.col { background: white; border: 1px solid #d7e1ea; border-radius: 14px; padding: 10px 12px; }
+.col h3 { margin: 0 0 6px; font-size: 16px; color: #14324a; }
+.col ol, .col ul { margin: 0; padding-left: 18px; }
+.col li { font-size: 14px; line-height: 1.35; margin: 0 0 5px; }
+.bar { margin-top: 10px; background: #14324a; color: white; border-radius: 12px; padding: 10px 12px; font-size: 15px; }
+.formula { font-family: Consolas, monospace; background: #14324a; color: white; border-radius: 12px;
+  padding: 10px 12px; font-size: 14px; line-height: 1.45; margin-top: 10px; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; }
+th { background: #14324a; color: white; font-size: 14px; text-align: left; padding: 7px 8px; }
+td { font-size: 14px; padding: 6px 8px; border-bottom: 1px solid #e4ebf1; }
+tr.win td { background: #e5f6f1; font-weight: 700; }
+.foot { margin-top: 10px; font-size: 14px; line-height: 1.35; color: #3d4d5c; }
+svg { display: block; margin-top: 8px; }
+</style></head>
+<body><div class="page"><header class="banner"><div class="kicker">Cleaning</div><h1>Why the text is rewritten before it is chunked</h1>
+<p class="lede">Running headers would otherwise become the terms BM25 ranks. A hyphen split across a line would miss the query word.</p></header><div class="step"><div class="rail"><div class="num ">1</div><div class="stem"></div></div><div class="card"><h2>Drop illegal controls</h2><p>Characters below U+0020 are removed. Tab and newline stay.</p><div class="io"><span class="chip in">IN raw extract_text</span><span class="chip out">OUT printable text</span></div><div class="mod">clean_extracted_text</div></div></div><div class="step"><div class="rail"><div class="num ">2</div><div class="stem"></div></div><div class="card"><h2>Join a hyphenated line break</h2><p>A hyphen at the end of a line is removed when the next line continues with a lowercase letter. The illustration is the rule, not a quote from a stored page: “infor-” + “mation” becomes “information”.</p><div class="io"><span class="chip in">IN broken word</span><span class="chip out">OUT joined word</span></div><div class="mod">regular expression in clean_extracted_text</div></div></div><div class="step"><div class="rail"><div class="num ">3</div><div class="stem"></div></div><div class="card"><h2>Collapse whitespace</h2><p>Runs of spaces become one space. Three or more newlines become one blank line. Each line is stripped.</p><div class="io"><span class="chip in">IN messy spacing</span><span class="chip out">OUT paragraph breaks</span></div><div class="mod">clean_extracted_text</div></div></div><div class="step"><div class="rail"><div class="num ">4</div><div class="stem"></div></div><div class="card"><h2>Remove repeated running matter after page 1</h2><p>Page-number lines, short course-code lines, and a two-to-four-word title-case running head are dropped. Page 1 is left intact so a title survives.</p><div class="io"><span class="chip in">IN page 2+ lines</span><span class="chip out">OUT body lines</span></div><div class="mod">remove_repeated_boilerplate</div></div></div><div class="step"><div class="rail"><div class="num ">5</div></div><div class="card"><h2>Drop empty and boilerplate blocks</h2><p>A block that is mostly those same patterns is not passed to the chunker. Failed pages contribute no blocks.</p><div class="io"><span class="chip in">IN blocks</span><span class="chip out">OUT blocks with text</span></div><div class="mod">is_boilerplate_block</div></div></div></div></body></html>

@@ -1,0 +1,9 @@
+flowchart TD
+    cfg{"embedding.provider"}
+    cfg -->|local, active| local["Load all-MiniLM-L6-v2<br/>refuse to start if width is not 384"]
+    cfg -->|mock| mock["Deterministic 384 random values<br/>for tests, not for meaning"]
+    cfg -->|custom_api| api["POST to EMBEDDING_ENDPOINT"]
+    local --> encode["encode one question<br/>or a batch of 32 chunks"]
+    mock --> encode
+    api --> encode
+    encode --> store["Store the raw floats<br/>cosine is applied later by Elasticsearch"]

@@ -1,0 +1,68 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #ffffff; }
+body { width: 760px; font-family: "Segoe UI", Calibri, sans-serif; color: #1c2833; }
+.page { width: 760px; background: #f4f7fb; padding: 18px 18px 22px; }
+.banner { background: linear-gradient(120deg, #14324a 0%, #0e6b5c 100%); color: white;
+  border-radius: 18px; padding: 16px 18px 14px; }
+.kicker { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
+h1 { font-size: 26px; line-height: 1.15; margin: 4px 0 8px; }
+.lede { margin: 0; font-size: 16px; line-height: 1.35; color: #e8f4f1; }
+.phase { margin: 14px 0 6px; font-size: 13px; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: #0e6b5c; }
+.step { display: flex; gap: 10px; align-items: stretch; }
+.rail { width: 36px; display: flex; flex-direction: column; align-items: center; }
+.num { width: 32px; height: 32px; border-radius: 16px; background: #0e6b5c; color: white;
+  font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+.num.gold { background: #b7791f; }
+.num.navy { background: #1d4e89; }
+.num.red { background: #9b2c2c; }
+.stem { width: 3px; flex: 1; background: #c5d4e0; margin-top: 4px; }
+.card { flex: 1; background: white; border: 1px solid #d7e1ea; border-radius: 14px;
+  padding: 10px 12px 11px; box-shadow: 0 1px 0 rgba(20,50,74,.04); margin-bottom: 8px; }
+.card h2 { margin: 0 0 4px; font-size: 18px; color: #14324a; }
+.card p { margin: 0; font-size: 15px; line-height: 1.35; }
+.io { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chip { font-size: 13px; font-weight: 700; border-radius: 999px; padding: 3px 8px; }
+.in { background: #e7eef6; color: #1d4e89; }
+.out { background: #e5f6f1; color: #0e6b5c; }
+.mod { margin-top: 6px; font-family: Consolas, monospace; font-size: 13px; color: #5c6b7a; }
+.decision { background: #fff8ec; border-color: #f0d7a6; }
+.fail { background: #fff5f5; border-color: #f0c2c2; }
+.note { background: #f7f1e4; border-color: #ead9b0; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.col { background: white; border: 1px solid #d7e1ea; border-radius: 14px; padding: 10px 12px; }
+.col h3 { margin: 0 0 6px; font-size: 16px; color: #14324a; }
+.col ol, .col ul { margin: 0; padding-left: 18px; }
+.col li { font-size: 14px; line-height: 1.35; margin: 0 0 5px; }
+.bar { margin-top: 10px; background: #14324a; color: white; border-radius: 12px; padding: 10px 12px; font-size: 15px; }
+.formula { font-family: Consolas, monospace; background: #14324a; color: white; border-radius: 12px;
+  padding: 10px 12px; font-size: 14px; line-height: 1.45; margin-top: 10px; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; }
+th { background: #14324a; color: white; font-size: 14px; text-align: left; padding: 7px 8px; }
+td { font-size: 14px; padding: 6px 8px; border-bottom: 1px solid #e4ebf1; }
+tr.win td { background: #e5f6f1; font-weight: 700; }
+.foot { margin-top: 10px; font-size: 14px; line-height: 1.35; color: #3d4d5c; }
+svg { display: block; margin-top: 8px; }
+</style></head>
+<body><div class="page"><header class="banner"><div class="kicker">Prompt</div><h1>The two messages the model actually receives</h1>
+<p class="lede">Retrieval chooses the evidence. Generation writes the sentences. The gate can skip generation entirely.</p></header>
+<div class="split">
+  <div class="col"><h3>System message</h3>
+    <ul>
+      <li>Use only the retrieved context.</li>
+      <li>Keep the source’s technical terms.</li>
+      <li>If the context is insufficient, answer with exactly: “The information is not available in the provided context.”</li>
+      <li>For a PDF hit, name the document and the pages.</li>
+    </ul>
+  </div>
+  <div class="col"><h3>User message on ask</h3>
+    <ul>
+      <li>Heading: Retrieved Unified Context.</li>
+      <li>The formatted hits.</li>
+      <li>Heading: User Question, then the query.</li>
+      <li>Closing line: answer only from the context and cite its provenance.</li>
+    </ul>
+  </div>
+</div>
+<div class="step"><div class="rail"><div class="num ">1</div><div class="stem"></div></div><div class="card"><h2>Call</h2><p>temperature is hardcoded to 0. No max_tokens field is sent. The mock client returns one fixed sentence. The five stored answers are not that sentence; responses.md names Llama 3.2 through Ollama.</p><div class="io"><span class="chip in">IN messages</span><span class="chip out">OUT completion text</span></div><div class="mod">CustomAPILLMClient.generate_completion</div></div></div><div class="step"><div class="rail"><div class="num ">2</div></div><div class="card"><h2>The other prompt</h2><p>RAGPipeline.answer_query, used by PDFRAGPipeline, heads the user text “Retrieved PDF Context” and does not apply the 0.35 score gate unless a filter or the graph flag is passed.</p><div class="io"><span class="chip in">IN chunks</span><span class="chip out">OUT RAGAnswer</span></div><div class="mod">RAGPipeline.answer_query</div></div></div></div></body></html>

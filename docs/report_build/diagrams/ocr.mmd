@@ -1,0 +1,12 @@
+flowchart TD
+    count{"Fewer than 15<br/>non-space characters?"}
+    count -->|no| skip["Keep the text page<br/>Tesseract is not called"]
+    count -->|yes| mu{"PyMuPDF opened<br/>the file?"}
+    mu -->|no| image["IMAGE_ONLY<br/>processing continues"]
+    mu -->|yes| bin{"Tesseract binary<br/>runs?"}
+    bin -->|no| image
+    bin -->|yes| render["Render at 300 DPI<br/>language eng"]
+    render --> useful{"OCR text still<br/>under 15 characters?"}
+    useful -->|yes| image
+    useful -->|no| keep["Replace the page text<br/>status SUCCESS"]
+    image --> host["11 Nov 2026 test host:<br/>binary not on PATH<br/>31 stored pages still flagged<br/>Docker installs tesseract-ocr"]

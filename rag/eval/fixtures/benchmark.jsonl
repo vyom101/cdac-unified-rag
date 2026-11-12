@@ -1,0 +1,5 @@
+{"query": "What is C-DAC?", "expected_document_ids": ["cdac_org"], "query_type": "factual"}
+{"query": "Where is C-DAC located?", "expected_document_ids": ["cdac_location"], "query_type": "location"}
+{"query": "PARAM supercomputer", "expected_document_ids": ["cdac_hpc"], "query_type": "semantic"}
+{"query": "Who is the Director?", "expected_document_ids": ["cdac_leadership"], "query_type": "role_sensitive"}
+{"query": "What is the weather in Pune?", "expected_document_ids": [], "query_type": "unanswerable", "unanswerable": true}

@@ -1,0 +1,20 @@
+erDiagram
+    PDF ||--|{ PAGE : contains
+    PAGE ||--|{ BLOCK : "splits into"
+    BLOCK }o--|{ CHUNK : "packed into"
+    CHUNK ||--o| SUMMARY : "CLI extractive summary"
+    PDF {
+      string document_id "SHA-256 of the bytes"
+      string document_name "file name"
+      string source_kind "crawled_pdf or uploaded_pdf"
+    }
+    CHUNK {
+      string chunk_id "also the Elasticsearch id"
+      string section "heading, else Introduction"
+      string page_numbers "pages of the blocks in the group"
+      string lineage "path, url, parent, depth"
+    }
+    SUMMARY {
+      string summary_id "sum_ plus the chunk id"
+      string page_numbers "not copied, so the list is empty"
+    }

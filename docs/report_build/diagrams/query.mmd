@@ -1,0 +1,19 @@
+sequenceDiagram
+    autonumber
+    participant Demo as _ask.py
+    participant Ask as answer_question
+    participant Hy as HybridRetriever
+    participant ES as rag_corpus_v1
+    participant Gate as grounding_failure
+    participant LLM as Llama 3.2
+    Demo->>Ask: What cyber forensics work does C-DAC describe?
+    Ask->>Hy: mode hybrid, pool 20, candidates 50
+    Hy->>ES: BM25 match and cosine kNN
+    ES-->>Hy: two score lists
+    Hy-->>Ask: 5 hits, including chunk_002 page 1 at 0.6678
+    Ask->>Gate: leading score against 0.35
+    Gate-->>Ask: continue, no role word in the question
+    Ask->>Ask: append 5 knowledge-graph hits
+    Ask->>LLM: system rules, unified context, temperature 0
+    LLM-->>Demo: q5.json, abstained false, 10 sources
+    Note over Demo: The PDF was already indexed.<br/>This call did not re-read the file.

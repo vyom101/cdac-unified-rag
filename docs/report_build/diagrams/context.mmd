@@ -1,0 +1,13 @@
+journey
+    title After fusion, on the ask path
+    section Rank
+      Take the fused order: 5: HybridRetriever
+      There is no cross-encoder: 3: HybridRetriever
+    section Gate
+      No hits abstains: 2: grounding_failure
+      First score below 0.35 abstains: 2: grounding_failure
+      A missing requested role abstains: 3: grounding_failure
+    section Prompt
+      Format document, pages, section, chunk id, text: 5: build_rag_context
+      Concatenate every hit, there is no token budget: 4: build_rag_context
+      Demo added 5 graph rows after the 5 corpus hits: 4: answer_question

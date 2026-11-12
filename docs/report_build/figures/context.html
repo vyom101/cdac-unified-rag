@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #ffffff; }
+body { width: 760px; font-family: "Segoe UI", Calibri, sans-serif; color: #1c2833; }
+.page { width: 760px; background: #f4f7fb; padding: 18px 18px 22px; }
+.banner { background: linear-gradient(120deg, #14324a 0%, #0e6b5c 100%); color: white;
+  border-radius: 18px; padding: 16px 18px 14px; }
+.kicker { font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; opacity: .85; }
+h1 { font-size: 26px; line-height: 1.15; margin: 4px 0 8px; }
+.lede { margin: 0; font-size: 16px; line-height: 1.35; color: #e8f4f1; }
+.phase { margin: 14px 0 6px; font-size: 13px; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: #0e6b5c; }
+.step { display: flex; gap: 10px; align-items: stretch; }
+.rail { width: 36px; display: flex; flex-direction: column; align-items: center; }
+.num { width: 32px; height: 32px; border-radius: 16px; background: #0e6b5c; color: white;
+  font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+.num.gold { background: #b7791f; }
+.num.navy { background: #1d4e89; }
+.num.red { background: #9b2c2c; }
+.stem { width: 3px; flex: 1; background: #c5d4e0; margin-top: 4px; }
+.card { flex: 1; background: white; border: 1px solid #d7e1ea; border-radius: 14px;
+  padding: 10px 12px 11px; box-shadow: 0 1px 0 rgba(20,50,74,.04); margin-bottom: 8px; }
+.card h2 { margin: 0 0 4px; font-size: 18px; color: #14324a; }
+.card p { margin: 0; font-size: 15px; line-height: 1.35; }
+.io { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chip { font-size: 13px; font-weight: 700; border-radius: 999px; padding: 3px 8px; }
+.in { background: #e7eef6; color: #1d4e89; }
+.out { background: #e5f6f1; color: #0e6b5c; }
+.mod { margin-top: 6px; font-family: Consolas, monospace; font-size: 13px; color: #5c6b7a; }
+.decision { background: #fff8ec; border-color: #f0d7a6; }
+.fail { background: #fff5f5; border-color: #f0c2c2; }
+.note { background: #f7f1e4; border-color: #ead9b0; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+.col { background: white; border: 1px solid #d7e1ea; border-radius: 14px; padding: 10px 12px; }
+.col h3 { margin: 0 0 6px; font-size: 16px; color: #14324a; }
+.col ol, .col ul { margin: 0; padding-left: 18px; }
+.col li { font-size: 14px; line-height: 1.35; margin: 0 0 5px; }
+.bar { margin-top: 10px; background: #14324a; color: white; border-radius: 12px; padding: 10px 12px; font-size: 15px; }
+.formula { font-family: Consolas, monospace; background: #14324a; color: white; border-radius: 12px;
+  padding: 10px 12px; font-size: 14px; line-height: 1.45; margin-top: 10px; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; }
+th { background: #14324a; color: white; font-size: 14px; text-align: left; padding: 7px 8px; }
+td { font-size: 14px; padding: 6px 8px; border-bottom: 1px solid #e4ebf1; }
+tr.win td { background: #e5f6f1; font-weight: 700; }
+.foot { margin-top: 10px; font-size: 14px; line-height: 1.35; color: #3d4d5c; }
+svg { display: block; margin-top: 8px; }
+</style></head>
+<body><div class="page"><header class="banner"><div class="kicker">Context</div><h1>Ranked hits become the only evidence in the prompt</h1>
+<p class="lede">Summary rows can repeat their parent chunk. Question 5 retrieved chunk_002 and the summary of chunk_002.</p></header><div class="step"><div class="rail"><div class="num ">1</div><div class="stem"></div></div><div class="card"><h2>Take the fused order</h2><p>Hybrid results are already sorted. There is no second ranker and no cross-encoder.</p><div class="io"><span class="chip in">IN top 5</span><span class="chip out">OUT the same five, in order</span></div><div class="mod">fuse_hybrid_results</div></div></div><div class="step"><div class="rail"><div class="num ">2</div><div class="stem"></div></div><div class="card"><h2>Gate first, on the ask path</h2><p>If the gate fails, the prompt is never built and the model is not called. The source list is still returned.</p><div class="io"><span class="chip in">IN hits</span><span class="chip out">OUT abstain, or continue</span></div><div class="mod">grounding_failure</div></div></div><div class="step"><div class="rail"><div class="num ">3</div><div class="stem"></div></div><div class="card"><h2>Format one block per hit</h2><p>For a PDF hit the block contains source kind, document name, pages, section, chunk id, and the text. Figure numbers are included when the chunk has them.</p><div class="io"><span class="chip in">IN SearchResult</span><span class="chip out">OUT a labelled block</span></div><div class="mod">build_rag_context</div></div></div><div class="step"><div class="rail"><div class="num ">4</div></div><div class="card"><h2>Concatenate all of them</h2><p>There is no token budget. Five long chunks, their summaries, and five graph rows can all enter the prompt. The demo did that: 10 hits.</p><div class="io"><span class="chip in">IN hit list</span><span class="chip out">OUT one context string</span></div><div class="mod">build_rag_context</div></div></div></div></body></html>

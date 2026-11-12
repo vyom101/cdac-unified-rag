@@ -1,0 +1,34 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Crawl exports written at the repo root. Recreate them with the pipeline.
+cdac_output.csv
+cdac_output.json
+
+# Local corpus. Keep the empty folders so a fresh clone has the expected paths.
+data/**
+!data/raw/
+!data/raw/.gitkeep
+!data/pdfs/
+!data/pdfs/.gitkeep
+!data/extracted/
+!data/extracted/.gitkeep
+!data/logs/
+!data/logs/.gitkeep
+!data/reports/
+!data/reports/.gitkeep
+!data/kg/
+!data/kg/.gitkeep
+
+# Report-build tooling and scratch renders
+docs/report_build/node_modules/
+docs/report_build/__pycache__/
+docs/report_build/diagrams/_check/
+
+.DS_Store
+Thumbs.db

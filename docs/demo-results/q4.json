@@ -1,0 +1,612 @@
+{
+  "query": "What training does the C-DAC ACTS programme provide?",
+  "answer": "The C-DAC ACTS programme provides training in the area of High Performance Computing (HPC) to scholars from IITG.\n\nProvenance: https://cdac.gov.in/index.aspx?id=innews\n\nSource: C-DAC: In the News\n\n[Source 8]\nSource kind: html\nType: Knowledge Graph\nKnowledge-graph evidence\nProvenance: https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing\nNode provenance: [{'source_url': 'https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing', 'chunk_id': 'doc_ea9adb0ec3408aab_chunk_005', 'section_id': 'ea9adb0ec3408aab_sec_000', 'crawl_timestamp': None, 'extraction_method': 'rule_based', 'confidence': 0.8}]\n\nThis information is mentioned in the section \"Product\" with chunk ID \"kg:4a905c6e386f9c5d\" and is also mentioned in another section with chunk ID \"kg:f0dabf07ed461c96\".",
+  "abstained": false,
+  "abstain_reason": null,
+  "sources": [
+    {
+      "chunk_id": "doc_90ecb11936e7ee6d_chunk_001",
+      "document_id": "90ecb11936e7ee6d",
+      "document_name": "Product Information",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=product_details&productId=AcademicCollaborativeProgramme",
+      "depth": 2,
+      "section": "Academic Collaborative Programme > Brief Description",
+      "page_numbers": [],
+      "score": 0.7,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "sum_doc_90ecb11936e7ee6d_chunk_001",
+      "document_id": "90ecb11936e7ee6d",
+      "document_name": "Product Information",
+      "source_kind": "html",
+      "content_kind": "chunk_summary",
+      "source_url": "https://cdac.gov.in/index.aspx?id=product_details&productId=AcademicCollaborativeProgramme",
+      "depth": 2,
+      "section": "summary",
+      "page_numbers": [],
+      "score": 0.7,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {
+        "chunk_id": "doc_90ecb11936e7ee6d_chunk_001"
+      },
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "sum_doc_1ca92a8dfce980ef_chunk_003",
+      "document_id": "1ca92a8dfce980ef",
+      "document_name": "Education and Training",
+      "source_kind": "html",
+      "content_kind": "chunk_summary",
+      "source_url": "https://cdac.gov.in/index.aspx?id=print_page&print=Education_Training",
+      "depth": 2,
+      "section": "summary",
+      "page_numbers": [],
+      "score": 0.5261407291961134,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {
+        "chunk_id": "doc_1ca92a8dfce980ef_chunk_003"
+      },
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "sum_doc_1ca92a8dfce980ef_chunk_001",
+      "document_id": "1ca92a8dfce980ef",
+      "document_name": "Education and Training",
+      "source_kind": "html",
+      "content_kind": "chunk_summary",
+      "source_url": "https://cdac.gov.in/index.aspx?id=print_page&print=Education_Training",
+      "depth": 2,
+      "section": "summary",
+      "page_numbers": [],
+      "score": 0.30772302233162757,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {
+        "chunk_id": "doc_1ca92a8dfce980ef_chunk_001"
+      },
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "sum_doc_d1b13f58fcf3e8be1bce2b4084833edf473d68a1f59568dbdbed7feffe3c4c69_chunk_002",
+      "document_id": "d1b13f58fcf3e8be1bce2b4084833edf473d68a1f59568dbdbed7feffe3c4c69",
+      "document_name": "18312922624e91ce.pdf",
+      "source_kind": "crawled_pdf",
+      "content_kind": "chunk_summary",
+      "source_url": "https://cdac.gov.in/index.aspx?id=EoI-PDF&dynamicId=EoI-ACTS-Trainer-20.02.2026.pdf",
+      "depth": 2,
+      "section": "summary",
+      "page_numbers": [],
+      "score": 0.3,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {
+        "source_kind": "crawled_pdf",
+        "source_path": "C:\\CDAC\\RAG\\data\\pdfs\\18312922624e91ce.pdf",
+        "document_id": "d1b13f58fcf3e8be1bce2b4084833edf473d68a1f59568dbdbed7feffe3c4c69",
+        "pdf_id": "18312922624e91ce",
+        "canonical_url": "https://cdac.gov.in/index.aspx?dynamicId=EoI-ACTS-Trainer-20.02.2026.pdf&id=EoI-PDF",
+        "parent_url": "https://cdac.gov.in/index.aspx?id=tenders_eoi",
+        "sub_link": "/index.aspx?id=EoI-PDF&dynamicId=EoI-ACTS-Trainer-20.02.2026.pdf",
+        "depth": 2,
+        "downloaded_at": "2026-11-11T09:42:47+00:00",
+        "content_hash": "d1b13f58fcf3e8be1bce2b4084833edf473d68a1f59568dbdbed7feffe3c4c69",
+        "chunk_id": "doc_d1b13f58fcf3e8be1bce2b4084833edf473d68a1f59568dbdbed7feffe3c4c69_chunk_002"
+      },
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "kg:1b3f9f8683ad1cf1",
+      "document_id": "1b3f9f8683ad1cf1",
+      "document_name": "PARAM 8000 to PARAM 10000\nC-DAC furthering ties with ICAD",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=success_stories",
+      "depth": 0,
+      "section": "Product",
+      "page_numbers": [],
+      "score": 0.25,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=success_stories",
+          "chunk_id": "doc_49ecee1394e7bfe3_chunk_001",
+          "section_id": "49ecee1394e7bfe3_sec_001",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "kg:3d482e53a0584f18",
+      "document_id": "3d482e53a0584f18",
+      "document_name": "C-DAC: In the News",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+      "depth": 0,
+      "section": "Page",
+      "page_numbers": [],
+      "score": 0.25,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_000",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_001",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_002",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_003",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_004",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_005",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_006",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_007",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_008",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_009",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_010",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_011",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_012",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_013",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_014",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_015",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_016",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_017",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_018",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_019",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_020",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_021",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_022",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_023",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_024",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_025",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_026",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_027",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_028",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_029",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_030",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_031",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_032",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_033",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_034",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_035",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_036",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_037",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_038",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+          "chunk_id": "doc_67cf21a215512dac_chunk_039",
+          "section_id": "67cf21a215512dac_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": [
+        {
+          "edge_id": "919b90400c24aada",
+          "source_entity_id": "3d482e53a0584f18",
+          "target_entity_id": "ac3af7fbe344f418",
+          "relationship_type": "MENTIONS",
+          "provenance": [
+            {
+              "source_url": "https://cdac.gov.in/index.aspx?id=innews",
+              "chunk_id": "doc_67cf21a215512dac_chunk_000",
+              "section_id": "67cf21a215512dac_sec_000",
+              "crawl_timestamp": null,
+              "extraction_method": "rule_based",
+              "confidence": 0.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chunk_id": "kg:4a905c6e386f9c5d",
+      "document_id": "4a905c6e386f9c5d",
+      "document_name": "PARAM SHAVAK\nPARAM SHAVAK\nC-DAC indigenously developed PARAM Shavak - a compact and energy efficient supercomp\n scholars from IITG in the area of HPC",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+      "depth": 0,
+      "section": "Product",
+      "page_numbers": [],
+      "score": 0.25,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+          "chunk_id": "doc_ea9adb0ec3408aab_chunk_005",
+          "section_id": "ea9adb0ec3408aab_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "kg:abfe95608e6d214f",
+      "document_id": "abfe95608e6d214f",
+      "document_name": "PARAM SHAVAK\nPARAM SHAVAK\nC-DAC indigenously developed PARAM Shavak - a compact and energy efficient supercomputing solution for the academic and research institutes",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+      "depth": 0,
+      "section": "Product",
+      "page_numbers": [],
+      "score": 0.25,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+          "chunk_id": "doc_ea9adb0ec3408aab_chunk_005",
+          "section_id": "ea9adb0ec3408aab_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "kg:f0dabf07ed461c96",
+      "document_id": "f0dabf07ed461c96",
+      "document_name": "PARAM YUVA-II to establish a tool for assessing the long term impacts of urbanization due to change of land use land cover over urban areas",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+      "depth": 0,
+      "section": "Product",
+      "page_numbers": [],
+      "score": 0.25,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+          "chunk_id": "doc_ea9adb0ec3408aab_chunk_030",
+          "section_id": "ea9adb0ec3408aab_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+          "chunk_id": "doc_ea9adb0ec3408aab_chunk_031",
+          "section_id": "ea9adb0ec3408aab_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": []
+    }
+  ],
+  "retrieval_mode": "hybrid",
+  "sources_filter": "all",
+  "chunks_retrieved": 10,
+  "include_kg": true
+}

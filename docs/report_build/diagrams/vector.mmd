@@ -1,0 +1,13 @@
+sequenceDiagram
+    autonumber
+    participant Q as Question
+    participant V as VectorRetriever
+    participant M as MiniLM
+    participant ES as Elasticsearch HNSW
+    Q->>V: search text
+    V->>M: embed_text, same model as indexing
+    M-->>V: 384 floats
+    V->>ES: knn on field embedding, k and num_candidates
+    Note over ES: cosine similarity<br/>num_candidates must be at least k
+    ES-->>V: approximate neighbours
+    V-->>Q: hits truncated to k

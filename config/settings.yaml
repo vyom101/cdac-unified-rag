@@ -1,0 +1,69 @@
+project_name: C-DAC Unified RAG
+
+paths:
+  extracted_data_dir: data/extracted
+  raw_data_dir: data/raw
+  pdf_data_dir: data/pdfs
+  pdf_manifest_path: data/pdfs/manifest.jsonl
+  crawl_run_report_path: data/reports/crawl_run_report.json
+
+kb:
+  source: all
+
+crawler:
+  start_url: https://cdac.gov.in/
+  allowed_domain: cdac.gov.in
+  max_urls: 500
+  max_duration_seconds: 3600
+  download_delay: 1.5
+
+elasticsearch:
+  url: http://localhost:9200
+  index: rag_corpus_v1
+
+embedding:
+  provider: local
+  model: sentence-transformers/all-MiniLM-L6-v2
+  dimension: 384
+
+llm:
+  provider: mock
+  model: mentor-provided-model
+
+retrieval:
+  mode: hybrid
+  top_k: 5
+  num_candidates: 50
+  hybrid_candidate_pool: 20
+  keyword_weight: 0.3
+  semantic_weight: 0.7
+  fusion_strategy: min_max
+  rrf_k: 60
+  domain_filter_enabled: true
+
+knowledge_graph:
+  store_path: data/kg/graph_v1.json
+
+grounding:
+  min_score: 0.35
+  abstain_on_role_mismatch: true
+
+html_chunking:
+  max_chunk_size: 1200
+  chunk_overlap: 150
+  min_chunk_size: 80
+
+pdf_chunking:
+  max_chunk_size: 1200
+  chunk_overlap: 100
+  min_chunk_size: 300
+
+ocr:
+  enabled: true
+  dpi: 300
+  language: eng
+
+image_extraction:
+  enabled: true
+  output_dir: data/extracted/images
+  min_dimension: 50

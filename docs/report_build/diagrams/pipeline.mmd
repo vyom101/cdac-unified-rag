@@ -1,0 +1,14 @@
+timeline
+    title One PDF is indexed once. Each question only searches.
+    section Index time
+        Identify : SHA-256 of the file bytes
+        Extract : pypdf text, blocks, OCR flag
+        Chunk : 1200 max, overlap 100, same-section merge
+        Embed : MiniLM, 384 dimensions, batch 32
+        Store : bulk index, id is the chunk id
+    section Question time
+        Search : BM25 pool 20 and kNN pool 20
+        Fuse : min-max, weights 0.3 and 0.7
+        Keep : top 5
+        Gate : abstain if the first score is below 0.35
+        Write : temperature 0, plus the source list

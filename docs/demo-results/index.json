@@ -1,0 +1,37 @@
+[
+  {
+    "file": "q1.json",
+    "query": "What is C-DAC's Aadhaar Data Vault service?",
+    "abstained": false,
+    "chunks_retrieved": 10,
+    "retrieval_mode": "hybrid"
+  },
+  {
+    "file": "q2.json",
+    "query": "Where is the C-DAC Pune centre located?",
+    "abstained": false,
+    "chunks_retrieved": 10,
+    "retrieval_mode": "hybrid"
+  },
+  {
+    "file": "q3.json",
+    "query": "What has C-DAC done in High Performance Computing?",
+    "abstained": false,
+    "chunks_retrieved": 10,
+    "retrieval_mode": "hybrid"
+  },
+  {
+    "file": "q4.json",
+    "query": "What training does the C-DAC ACTS programme provide?",
+    "abstained": false,
+    "chunks_retrieved": 10,
+    "retrieval_mode": "hybrid"
+  },
+  {
+    "file": "q5.json",
+    "query": "What cyber forensics work does C-DAC describe?",
+    "abstained": false,
+    "chunks_retrieved": 10,
+    "retrieval_mode": "hybrid"
+  }
+]

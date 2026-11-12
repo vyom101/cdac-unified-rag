@@ -1,0 +1,13 @@
+classDiagram
+    class IndexDocument {
+      keyword chunk_id
+      keyword document_id
+      keyword source_kind
+      text content
+      integer page_numbers
+      keyword figure_refs
+      object lineage
+      dense_vector embedding
+      keyword schema_version
+    }
+    note for IndexDocument "384 dimensions, cosine, index true. schema_version is v3. The same chunk id replaces the document."

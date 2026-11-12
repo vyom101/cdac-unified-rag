@@ -1,0 +1,17 @@
+flowchart TD
+    start(["Three ways in"])
+    start --> one["ingest --pdf\ncopy one file into data/raw"]
+    start --> many["ingest-all\nevery PDF in data/raw"]
+    start --> crawled["process-pdfs\nmanifest in data/pdfs"]
+    one --> proc["process_pdf"]
+    many --> proc
+    crawled --> proc
+    proc --> ok{"Bytes open as a PDF\nwith at least one page?"}
+    ok -->|no| bad["That file stops\nFileNotFound, OSError,\nPdfReadError, or ValueError"]
+    ok -->|yes| hid["document_id = SHA-256\ndocument_name = file name"]
+    hid --> lineage["Crawled files also keep\nURL, parent URL, and depth"]
+    lineage --> json["Write one artifact JSON\nunder data/extracted"]
+    json --> later["python run.py index\nembeds chunks, summaries,\nand composites"]
+    later --> live["Live index shape:\n2,880 PDF chunks\n2,880 summaries\n316 composites"]
+    pipe["PDFRAGPipeline.ingest_pdf\nembeds now and skips summaries"]
+    proc -.-> pipe

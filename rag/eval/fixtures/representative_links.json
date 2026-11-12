@@ -1,0 +1,12 @@
+[
+  {"label": "homepage_depth_0", "url": "https://cdac.gov.in/", "source_type": "html", "expected_depth": 0, "require_parent": false},
+  {"label": "depth_1_internal", "url": "https://cdac.gov.in/index.aspx?id=about", "source_type": "html", "expected_depth": 1, "require_parent": true},
+  {"label": "depth_2_internal", "url": "https://cdac.gov.in/index.aspx?id=hpc", "source_type": "html", "expected_depth": 2, "require_parent": true},
+  {"label": "depth_3_internal", "url": "https://cdac.gov.in/index.aspx?id=ai", "source_type": "html", "expected_depth": 3, "require_parent": true},
+  {"label": "print_variant", "url": "https://cdac.gov.in/index.aspx?id=about&print=1", "source_type": "html", "expected_depth": null, "require_parent": false},
+  {"label": "sitemap_discovered", "url": "https://cdac.gov.in/index.aspx?id=contact", "source_type": "html", "expected_depth": null, "require_parent": true},
+  {"label": "pdf_document", "url": "https://cdac.gov.in/docs/sample-report.pdf", "source_type": "pdf", "expected_depth": null, "require_parent": true},
+  {"label": "pdf_depth_2", "url": "https://cdac.gov.in/publications/annual-report.pdf", "source_type": "pdf", "expected_depth": 2, "require_parent": true},
+  {"label": "nested_section_page", "url": "https://cdac.gov.in/index.aspx?id=training", "source_type": "html", "expected_depth": null, "require_parent": true},
+  {"label": "deep_frontier_page", "url": "https://cdac.gov.in/index.aspx?id=tenders", "source_type": "html", "expected_depth": null, "require_parent": true}
+]

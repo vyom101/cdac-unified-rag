@@ -1,0 +1,60 @@
+services:
+  elasticsearch:
+    image: elasticsearch:8.12.2
+    environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:9200/_cluster/health?wait_for_status=yellow&timeout=1s || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 40s
+
+  app:
+    build: .
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      ELASTICSEARCH_INDEX: rag_corpus_v1
+      WAIT_FOR_ELASTICSEARCH: "1"
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config:ro
+    command: ["python", "run.py", "--help"]
+
+  ui:
+    build: .
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      ELASTICSEARCH_INDEX: rag_corpus_v1
+      WAIT_FOR_ELASTICSEARCH: "1"
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config:ro
+    ports:
+      - "127.0.0.1:8765:8765"
+    # 0.0.0.0 is container-internal only; the host publication above is
+    # loopback-only, so the UI is not reachable through an external host NIC.
+    command: ["python", "docker/serve_ui.py"]
+    profiles:
+      - ui
+
+volumes:
+  es_data:

@@ -1,0 +1,14 @@
+stateDiagram-v2
+    [*] --> Opened
+    Opened --> PageFailed: exception on this page only
+    Opened --> Cleaned: pypdf extract_text
+    Cleaned --> TextPage: 15 or more non-space characters
+    Cleaned --> Sparse: under 15 non-space characters
+    Sparse --> Recovered: Tesseract returns usable text
+    Sparse --> ImageOnly: no Tesseract, or OCR still sparse
+    TextPage --> Blocks: heading or paragraph
+    Recovered --> Blocks
+    ImageOnly --> Blocks: page is kept and flagged
+    PageFailed --> Next
+    Blocks --> Next
+    Next --> [*]

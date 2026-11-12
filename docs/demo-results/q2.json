@@ -1,0 +1,347 @@
+{
+  "query": "Where is the C-DAC Pune centre located?",
+  "answer": "The C-DAC Pune centre is located in Pune.\n\nProvenance: Source 3, Source 6, and Source 10.",
+  "abstained": false,
+  "abstain_reason": null,
+  "sources": [
+    {
+      "chunk_id": "doc_8bc314d6e847493d_chunk_000",
+      "document_id": "8bc314d6e847493d",
+      "document_name": "C-DAC: Press Kit - Press Releases",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=release",
+      "depth": 1,
+      "section": "C-DAC: Press Kit - Press Releases",
+      "page_numbers": [],
+      "score": 0.7,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "sum_doc_0ba4951d46a55963_chunk_001",
+      "document_id": "0ba4951d46a55963",
+      "document_name": "C-DAC Centre @ Pune",
+      "source_kind": "html",
+      "content_kind": "chunk_summary",
+      "source_url": "https://cdac.gov.in/index.aspx?id=PN",
+      "depth": 1,
+      "section": "summary",
+      "page_numbers": [],
+      "score": 0.6788477521722703,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {
+        "chunk_id": "doc_0ba4951d46a55963_chunk_001"
+      },
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "sum_doc_905ea5e00608e323456c665cb231964b32d25a7307eb2468efd2cc992a332c0c_chunk_005",
+      "document_id": "905ea5e00608e323456c665cb231964b32d25a7307eb2468efd2cc992a332c0c",
+      "document_name": "d2b3a6bd3feb5344.pdf",
+      "source_kind": "crawled_pdf",
+      "content_kind": "chunk_summary",
+      "source_url": "https://cdac.gov.in/index.aspx?id=tenders_EoI-Empanelment-Spoke-AI-ARVR",
+      "depth": 2,
+      "section": "summary",
+      "page_numbers": [],
+      "score": 0.665642236494143,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {
+        "source_kind": "crawled_pdf",
+        "source_path": "C:\\CDAC\\RAG\\data\\pdfs\\d2b3a6bd3feb5344.pdf",
+        "document_id": "905ea5e00608e323456c665cb231964b32d25a7307eb2468efd2cc992a332c0c",
+        "pdf_id": "d2b3a6bd3feb5344",
+        "canonical_url": "https://cdac.gov.in/index.aspx?id=tenders_EoI-Empanelment-Spoke-AI-ARVR",
+        "parent_url": "https://cdac.gov.in/index.aspx?id=tenders_eoi",
+        "sub_link": "/index.aspx?id=tenders_EoI-Empanelment-Spoke-AI-ARVR",
+        "depth": 2,
+        "downloaded_at": "2026-11-11T09:44:22+00:00",
+        "content_hash": "905ea5e00608e323456c665cb231964b32d25a7307eb2468efd2cc992a332c0c",
+        "chunk_id": "doc_905ea5e00608e323456c665cb231964b32d25a7307eb2468efd2cc992a332c0c_chunk_005"
+      },
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "doc_0ba4951d46a55963_chunk_002",
+      "document_id": "0ba4951d46a55963",
+      "document_name": "C-DAC Centre @ Pune",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=PN",
+      "depth": 1,
+      "section": "C-DAC Pune",
+      "page_numbers": [],
+      "score": 0.605324896108801,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "sum_doc_8bc314d6e847493d_chunk_000",
+      "document_id": "8bc314d6e847493d",
+      "document_name": "C-DAC: Press Kit - Press Releases",
+      "source_kind": "html",
+      "content_kind": "chunk_summary",
+      "source_url": "https://cdac.gov.in/index.aspx?id=release",
+      "depth": 1,
+      "section": "summary",
+      "page_numbers": [],
+      "score": 0.5756074801662261,
+      "retrieval_method": "hybrid",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {
+        "chunk_id": "doc_8bc314d6e847493d_chunk_000"
+      },
+      "kg_node_provenance": [],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "kg:8c0e1211b13540e3",
+      "document_id": "8c0e1211b13540e3",
+      "document_name": "C-DAC Centre @ Pune",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=PN",
+      "depth": 0,
+      "section": "Page",
+      "page_numbers": [],
+      "score": 0.42857142857142855,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=PN",
+          "chunk_id": "doc_0ba4951d46a55963_chunk_000",
+          "section_id": "0ba4951d46a55963_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=PN",
+          "chunk_id": "doc_0ba4951d46a55963_chunk_001",
+          "section_id": "0ba4951d46a55963_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=PN",
+          "chunk_id": "doc_0ba4951d46a55963_chunk_002",
+          "section_id": "0ba4951d46a55963_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": [
+        {
+          "edge_id": "0fc3704be88a1d42",
+          "source_entity_id": "8c0e1211b13540e3",
+          "target_entity_id": "ac3af7fbe344f418",
+          "relationship_type": "MENTIONS",
+          "provenance": [
+            {
+              "source_url": "https://cdac.gov.in/index.aspx?id=PN",
+              "chunk_id": "doc_0ba4951d46a55963_chunk_000",
+              "section_id": "0ba4951d46a55963_sec_000",
+              "crawl_timestamp": null,
+              "extraction_method": "rule_based",
+              "confidence": 0.8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chunk_id": "kg:0d0c6f5ea6e48e18",
+      "document_id": "0d0c6f5ea6e48e18",
+      "document_name": "PARAM supercomputer and establishing the nation as credentials as an enabler of\nadvanced technologies",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=tenders_EoI-Empanelment-Spoke-AI-ARVR",
+      "depth": 0,
+      "section": "Product",
+      "page_numbers": [],
+      "score": 0.2857142857142857,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=tenders_EoI-Empanelment-Spoke-AI-ARVR",
+          "chunk_id": "doc_905ea5e00608e323456c665cb231964b32d25a7307eb2468efd2cc992a332c0c_chunk_005",
+          "section_id": null,
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "kg:1b3f9f8683ad1cf1",
+      "document_id": "1b3f9f8683ad1cf1",
+      "document_name": "PARAM 8000 to PARAM 10000\nC-DAC furthering ties with ICAD",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=success_stories",
+      "depth": 0,
+      "section": "Product",
+      "page_numbers": [],
+      "score": 0.2857142857142857,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=success_stories",
+          "chunk_id": "doc_49ecee1394e7bfe3_chunk_001",
+          "section_id": "49ecee1394e7bfe3_sec_001",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "kg:22d940bb186c3f21",
+      "document_id": "22d940bb186c3f21",
+      "document_name": "PARAM Yuva II and is a tool for verifying and analyzing accuracy of forecasted weather",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+      "depth": 0,
+      "section": "Product",
+      "page_numbers": [],
+      "score": 0.2857142857142857,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+          "chunk_id": "doc_ea9adb0ec3408aab_chunk_036",
+          "section_id": "ea9adb0ec3408aab_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=achieve_high_performance_computing",
+          "chunk_id": "doc_ea9adb0ec3408aab_chunk_037",
+          "section_id": "ea9adb0ec3408aab_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": []
+    },
+    {
+      "chunk_id": "kg:26db1d3bd0c52d51",
+      "document_id": "26db1d3bd0c52d51",
+      "document_name": "C-DAC Centre @ Hyderabad",
+      "source_kind": "html",
+      "content_kind": "chunk",
+      "source_url": "https://cdac.gov.in/index.aspx?id=HY",
+      "depth": 0,
+      "section": "Page",
+      "page_numbers": [],
+      "score": 0.2857142857142857,
+      "retrieval_method": "knowledge_graph",
+      "figure_refs": [],
+      "table_refs": [],
+      "figure_pages": {},
+      "table_pages": {},
+      "lineage": {},
+      "kg_node_provenance": [
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=HY",
+          "chunk_id": "doc_61ff3b645fe0c866_chunk_000",
+          "section_id": "61ff3b645fe0c866_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=HY",
+          "chunk_id": "doc_61ff3b645fe0c866_chunk_001",
+          "section_id": "61ff3b645fe0c866_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        },
+        {
+          "source_url": "https://cdac.gov.in/index.aspx?id=HY",
+          "chunk_id": "doc_61ff3b645fe0c866_chunk_002",
+          "section_id": "61ff3b645fe0c866_sec_000",
+          "crawl_timestamp": null,
+          "extraction_method": "rule_based",
+          "confidence": 0.8
+        }
+      ],
+      "kg_edge_provenance": [
+        {
+          "edge_id": "609affdb2ac153d0",
+          "source_entity_id": "26db1d3bd0c52d51",
+          "target_entity_id": "ac3af7fbe344f418",
+          "relationship_type": "MENTIONS",
+          "provenance": [
+            {
+              "source_url": "https://cdac.gov.in/index.aspx?id=HY",
+              "chunk_id": "doc_61ff3b645fe0c866_chunk_000",
+              "section_id": "61ff3b645fe0c866_sec_000",
+              "crawl_timestamp": null,
+              "extraction_method": "rule_based",
+              "confidence": 0.8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "retrieval_mode": "hybrid",
+  "sources_filter": "all",
+  "chunks_retrieved": 10,
+  "include_kg": true
+}

@@ -1,0 +1,13 @@
+﻿sequenceDiagram
+  autonumber
+  actor User
+  participant Ask as answer_question
+  participant Hy as HybridRetriever
+  participant ES as rag_corpus_v1
+  User->>Ask: question
+  Ask->>Hy: search pool 20
+  Hy->>ES: BM25 and kNN
+  ES-->>Hy: two score lists
+  Hy-->>Ask: top 5 fused
+  Note over Ask: gate at 0.35
+  Ask-->>User: RAGAnswer
